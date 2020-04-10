@@ -661,7 +661,6 @@ export const fields = [
         model: 'logicInput.abc',
         required: true,
         enables: ['=', '>', '>=', '<', '<=', 'betweenIn', 'betweenWith', '!=', 'multiple'],
-        //defaultHide: true
     },
     {
         type: 'LogicSelect',
