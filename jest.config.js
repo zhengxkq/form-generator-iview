@@ -3,7 +3,7 @@
  * @author: zhw(zhenghaiwang@baidu.com)
  * @Date: 2020-04-10 09:09:54
  * @Last Modified by: zhw
- * @Last Modified time: 2020-04-10 16:46:21
+ * @Last Modified time: 2020-04-19 19:51:39
  */
 
 module.exports = {
@@ -18,5 +18,10 @@ module.exports = {
         '^.+\\.js$': '<rootDir>/node_modules/babel-jest',
         '.*\\.(vue)$': '<rootDir>/node_modules/vue-jest'
     },
-    collectCoverage: true
+    collectCoverage: true,
+    testMatch: [
+        '**/__tests__/**/*.[jt]s?(x)',
+        '**/?(*.)+(spec).[jt]s?(x)'
+    ],
+    preset: 'jest-puppeteer'
 };
