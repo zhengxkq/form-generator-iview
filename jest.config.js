@@ -3,7 +3,7 @@
  * @author: zhw(zhenghaiwang@baidu.com)
  * @Date: 2020-04-10 09:09:54
  * @Last Modified by: zhw
- * @Last Modified time: 2020-04-19 19:51:39
+ * @Last Modified time: 2020-04-23 01:20:18
  */
 
 module.exports = {
@@ -18,6 +18,7 @@ module.exports = {
         '^.+\\.js$': '<rootDir>/node_modules/babel-jest',
         '.*\\.(vue)$': '<rootDir>/node_modules/vue-jest'
     },
+    coverageReporters: ['text', 'lcov'],
     collectCoverage: true,
     testMatch: [
         '**/__tests__/**/*.[jt]s?(x)',

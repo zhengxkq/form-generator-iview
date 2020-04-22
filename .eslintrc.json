@@ -8,7 +8,8 @@
     "env": {
         "browser": true,
         "commonjs": true,
-        "es6": true
+        "es6": true,
+        "jest": true
     },
     "extends": [
         "eslint:recommended",
@@ -34,6 +35,13 @@
             "ignoreWhenEmpty": true,
             "ignores": ["pre", "textarea", "i-code", "a", "template"]
           }]
+    },
+    "globals": {
+        "page": true,
+        "browser": true,
+        "context": true,
+        "jestPuppeteer": true,
+        "test": true
     },
     "plugins": [
         "json"

@@ -62,7 +62,7 @@ const routeField = {
     type: 'Button',
     model: 'detailRoute',
     subtype: 'primary',
-    text: '详情',
+    text: '路由到详情',
     action: {
         type: 'route'
     },

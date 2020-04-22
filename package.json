@@ -26,7 +26,8 @@
         "build": "npm run build-dev && npm run build-prod",
         "lint": "eslint --fix --ext .js,.vue,.json src --fix --ext .json docs/website-data-api",
         "deploy": "fis3 release --root=./website/dist/ --file=./deploy-baidu/config.js",
-        "test": "jest --runInBand",
+        "test": "npm run dev && npm run test-jest",
+        "test-jest": "jest --maxWorkers=2",
         "test-karma": "karma start ./test/karma.conf.js --single-run"
     },
     "repository": {

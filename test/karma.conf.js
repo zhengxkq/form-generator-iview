@@ -3,7 +3,7 @@
  * @author: zhw(zhenghaiwang@baidu.com)
  * @Date: 2020-04-19 01:19:28
  * @Last Modified by: zhw
- * @Last Modified time: 2020-04-19 14:26:59
+ * @Last Modified time: 2020-04-22 22:22:19
  */
 
 var webpackConfig = require('../build/webpack.test.config');
@@ -44,5 +44,6 @@ module.exports = function (config) {
             'karma-spec-reporter'
         ],
         colors: true,
+        concurrency: Infinity
     });
 };
