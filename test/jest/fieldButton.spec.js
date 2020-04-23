@@ -3,7 +3,7 @@
  * @author: zhw(zhenghaiwang@baidu.com)
  * @Date: 2020-04-10 09:43:53
  * @Last Modified by: zhw
- * @Last Modified time: 2020-04-23 01:04:15
+ * @Last Modified time: 2020-04-23 11:03:38
  */
 import 'expect-puppeteer';
 
@@ -28,6 +28,13 @@ describe('test fieldButton', () => {
         await page.waitForNavigation();
         await expect(page.url()).toContain('http://localhost:9000/#/home?test=aaa');
         await page.goBack();
+    });
+
+    test('type ajax', async () => {
+        await expect(page).toClick('button span', {text: '发送请求'});
+        await page.on('request', async (request) => {
+            await expect(request.url()).toContain('/curdDelete');
+        });
     });
     // afterAll(async () => {
     //     await browser.close();

@@ -196,7 +196,7 @@ let ajax = {};
 
 const ajaxField = {
     type: 'Button',
-    text: '删除',
+    text: '发送请求',
     subtype: 'error',
     action: {
         type: 'ajax',
