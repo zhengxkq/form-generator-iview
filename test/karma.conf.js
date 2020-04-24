@@ -3,14 +3,14 @@
  * @author: zhw(zhenghaiwang@baidu.com)
  * @Date: 2020-04-19 01:19:28
  * @Last Modified by: zhw
- * @Last Modified time: 2020-04-22 22:22:19
+ * @Last Modified time: 2020-04-24 11:13:54
  */
 
 var webpackConfig = require('../build/webpack.test.config');
 // 
 module.exports = function (config) {
     config.set({
-        basePath: './unit/tests',
+        basePath: './unit',
         frameworks: ['mocha'],
         files: ['*.test.js'],
 
@@ -28,8 +28,8 @@ module.exports = function (config) {
         coverageReporter: {
             dir: './coverage',
             reporters: [
-                { type: 'lcov', subdir: '.' },
-                { type: 'text-summary' }
+                {type: 'lcov', subdir: '.'},
+                {type: 'text-summary'}
             ]
         },
         reporters: ['spec', 'coverage'],
@@ -41,7 +41,8 @@ module.exports = function (config) {
             'karma-coverage',
             // 'karma-sourcemap',
             'karma-webpack',
-            'karma-spec-reporter'
+            'karma-spec-reporter',
+            'karma-coverage-istanbul-reporter'
         ],
         colors: true,
         concurrency: Infinity
