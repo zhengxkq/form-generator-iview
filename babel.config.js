@@ -16,8 +16,7 @@ module.exports = function (api) {
                         'iOS >= 10.3',
                         'Firefox >= 54',
                         'Edge >= 17'
-                    ],
-                    node: 'current'
+                    ]
                 }
             }
         ]
@@ -25,12 +24,16 @@ module.exports = function (api) {
     const plugins = [
         '@babel/plugin-proposal-optional-chaining',
         '@babel/plugin-proposal-class-properties',
-        '@babel/plugin-syntax-dynamic-import',
-        'transform-es2015-modules-commonjs'
+        '@babel/plugin-syntax-dynamic-import'
     ];
-
+    const env = {
+        test: {
+            plugins: ['istanbul']
+        }
+    };
     return {
         presets,
-        plugins
+        plugins,
+        env
     };
 };

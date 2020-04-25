@@ -62,7 +62,7 @@ const routeField = {
     type: 'Button',
     model: 'detailRoute',
     subtype: 'primary',
-    text: '详情',
+    text: '路由到详情',
     action: {
         type: 'route'
     },
@@ -196,7 +196,7 @@ let ajax = {};
 
 const ajaxField = {
     type: 'Button',
-    text: '删除',
+    text: '发送请求',
     subtype: 'error',
     action: {
         type: 'ajax',
