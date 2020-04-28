@@ -660,8 +660,7 @@ export const fields = [
         label: '逻辑输入',
         model: 'logicInput.abc',
         required: true,
-        enables: ['=', '>', '>=', '<', '<=', 'betweenIn', 'betweenWith', '!=', 'multiple'],
-        //defaultHide: true
+        enables: ['=', '>', '>=', '<', '<=', 'betweenIn', 'betweenWith', '!=', 'multiple']
     },
     {
         type: 'LogicSelect',

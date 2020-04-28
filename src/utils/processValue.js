@@ -3,7 +3,7 @@
  * @author: zhw(zhenghaiwang@baidu.com)
  * @Date: 2020-03-19 17:21:14
  * @Last Modified by: zhw
- * @Last Modified time: 2020-04-09 00:18:08
+ * @Last Modified time: 2020-04-10 01:31:26
  */
 
 export const setValue = function setValue({originModel, model, value}) {
@@ -23,6 +23,7 @@ export const setValue = function setValue({originModel, model, value}) {
         }
         return formModel[model];
     }, originModel);
+    return originModel;
 };
 
 export const getValue = function getValue({originModel, model}) {

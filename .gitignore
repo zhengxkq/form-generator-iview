@@ -22,3 +22,6 @@ test/unit/coverage
 /website/dist
 /dist
 /deploy-baidu
+/coverage
+/.vscode
+test/unit/tests/coverage

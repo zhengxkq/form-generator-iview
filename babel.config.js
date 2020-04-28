@@ -26,9 +26,14 @@ module.exports = function (api) {
         '@babel/plugin-proposal-class-properties',
         '@babel/plugin-syntax-dynamic-import'
     ];
-
+    const env = {
+        test: {
+            plugins: ['istanbul']
+        }
+    };
     return {
         presets,
-        plugins
+        plugins,
+        env
     };
 };
