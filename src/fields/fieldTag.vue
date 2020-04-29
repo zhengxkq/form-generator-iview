@@ -10,7 +10,7 @@
         >{{ item.name }}</Tag>
     </div>
     <Tag
-        v-else
+        v-else-if="computedField.name"
         :color="color"
         :type="field.subtype || 'border'"
         :fade="field.fade"
@@ -51,6 +51,11 @@ export default {
                     originModel: this.form.model,
                     model: this.field.model
                 });
+                if (!options.find(item => item.value === value)) {
+                    /* eslint-disable no-console */
+                    console.warn('form.model' + value + '绑定警告，请配置正确的model值');
+                    return {};
+                }
                 return options.find(item => item.value === value);
             }
             return {};
