@@ -53,7 +53,7 @@ export default {
                 });
                 if (!options.find(item => item.value === value)) {
                     /* eslint-disable no-console */
-                    console.warn('form.model' + value + '绑定警告，请配置正确的model值');
+                    console.warn('[formGenerator warn]: please define a contain model !');
                     return {};
                 }
                 return options.find(item => item.value === value);

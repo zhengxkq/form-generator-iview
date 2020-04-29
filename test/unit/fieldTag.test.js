@@ -14,13 +14,13 @@ describe('simpleFieldTag', () => {
     const wrapper = mount(fieldTag, {
         provide: {
             form: {
-                model: {"status":"1"}
+                model: {status: '1'}
             }
         },
         propsData: {
             field: {
                 type: 'Tag',
-                model: "status",
+                model: 'status',
                 options: [
                     {
                         name: '正常',
@@ -42,13 +42,13 @@ describe('multipleFieldTag', () => {
     const wrapper = mount(fieldTag, {
         provide: {
             form: {
-                model: {"status": ['1', '2']}
+                model: {status: ['1', '2']}
             }
         },
         propsData: {
             field: {
                 type: 'Tag',
-                model: "status",
+                model: 'status',
                 options: [
                     {
                         name: '正常',
@@ -76,13 +76,41 @@ describe('modelErrFieldTag', () => {
     const wrapper = mount(fieldTag, {
         provide: {
             form: {
-                model: {"status": '2'}
+                model: {status: '2'}
             }
         },
         propsData: {
             field: {
                 type: 'Tag',
-                model: "status",
+                model: 'status',
+                options: [
+                    {
+                        name: '正常',
+                        value: '1',
+                        color: 'primary'
+                    }
+                ]
+            }
+        }
+    });
+    
+    it('renders the empty tag markup', () => {
+        expect(wrapper.isEmpty()).to.be.true
+    });
+
+});
+
+describe('modelEmptyFieldTag', () => {
+    const wrapper = mount(fieldTag, {
+        provide: {
+            form: {
+                model: {}
+            }
+        },
+        propsData: {
+            field: {
+                type: 'Tag',
+                model: 'status',
                 options: [
                     {
                         name: '正常',
