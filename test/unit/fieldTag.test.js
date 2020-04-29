@@ -10,7 +10,7 @@ import {expect} from 'chai';
 import fieldTag from '../../src/fields/fieldTag';
 import {mount} from '@vue/test-utils';
 
-describe('simpleFieldTag', () => {
+describe('fieldTagSimpleModel', () => {
     const wrapper = mount(fieldTag, {
         provide: {
             form: {
@@ -38,7 +38,7 @@ describe('simpleFieldTag', () => {
     
 });
 
-describe('multipleFieldTag', () => {
+describe('fieldTagMultipleModel', () => {
     const wrapper = mount(fieldTag, {
         provide: {
             form: {
@@ -72,7 +72,7 @@ describe('multipleFieldTag', () => {
 
 });
 
-describe('modelErrFieldTag', () => {
+describe('fieldTagErrModel', () => {
     const wrapper = mount(fieldTag, {
         provide: {
             form: {
@@ -100,7 +100,7 @@ describe('modelErrFieldTag', () => {
 
 });
 
-describe('modelEmptyFieldTag', () => {
+describe('fieldTagEmptyModel', () => {
     const wrapper = mount(fieldTag, {
         provide: {
             form: {
