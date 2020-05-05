@@ -2,8 +2,8 @@
  * @file: Tag测试用例
  * @author: gls(guoyu5212@163.com)
  * @Date: 2020-04-28 16:50:00
- * @Last Modified by: gls
- * @Last Modified time: 2020-04-29 14:20:02
+ * @Last Modified by: zhw
+ * @Last Modified time: 2020-05-06 00:03:40
  */
 
 import {expect} from 'chai';
@@ -31,11 +31,11 @@ describe('fieldTagSimpleModel', () => {
             }
         }
     });
-    
+
     it('renders the correct simple tag markup', () => {
-        expect(wrapper.html()).contains('<tag color="primary" type="border" class="fg-ivu-tag">正常</tag>')
-    })
-    
+        expect(wrapper.html()).contains('<tag color="primary" type="border" class="fg-ivu-tag">正常</tag>');
+    });
+
 });
 
 describe('fieldTagMultipleModel', () => {
@@ -95,7 +95,7 @@ describe('fieldTagErrModel', () => {
     });
     
     it('renders the empty tag markup', () => {
-        expect(wrapper.isEmpty()).to.be.true
+        expect(wrapper.isEmpty()).to.be.true;
     });
 
 });
@@ -123,7 +123,7 @@ describe('fieldTagEmptyModel', () => {
     });
     
     it('renders the empty tag markup', () => {
-        expect(wrapper.isEmpty()).to.be.true
+        expect(wrapper.isEmpty()).to.be.true;
     });
 
 });

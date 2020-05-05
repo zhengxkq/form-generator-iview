@@ -3,19 +3,18 @@
  * @author: zhw(zhenghaiwang@baidu.com)
  * @Date: 2020-04-19 01:19:28
  * @Last Modified by: zhw
- * @Last Modified time: 2020-04-24 11:13:54
+ * @Last Modified time: 2020-05-05 23:59:58
  */
 
 var webpackConfig = require('../build/webpack.test.config');
 // 
 module.exports = function (config) {
     config.set({
-        basePath: './unit',
         frameworks: ['mocha'],
-        files: ['*.test.js'],
+        files: ['./index.js'],
 
         preprocessors: {
-            '*.test.js': ['webpack']
+            './index.js': ['webpack']
         },
 
         webpack: webpackConfig,
