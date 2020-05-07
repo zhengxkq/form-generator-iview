@@ -18,10 +18,9 @@ npm-debug.log
 *.log
 websites/dist/
 yarn-error.log
-test/unit/coverage
 /website/dist
 /dist
 /deploy-baidu
 /coverage
 /.vscode
-test/unit/tests/coverage
+test/coverage

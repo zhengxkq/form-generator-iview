@@ -2,8 +2,8 @@
  * @file: Switch测试用例
  * @author: gls(guoyu5212@163.com)
  * @Date: 2020-04-29 15:20:08
- * @Last Modified by: gls
- * @Last Modified time: 2020-04-30 18:20:00
+ * @Last Modified by: zhw
+ * @Last Modified time: 2020-05-06 00:04:07
  */
 
 import {expect} from 'chai';
@@ -36,10 +36,10 @@ describe('fieldSwitch', () => {
     });
 
     it('confirm input value', () => {
-        expect(wrapper.find('input').attributes('value')).to.equal('false')
+        expect(wrapper.find('input').attributes('value')).to.equal('false');
     });
 
-    it('change switch input value', async() => {
+    it('change switch input value', async () => {
         /*
         shallowMount
             '<i-switch-stub truevalue="1" falsevalue="0" size="default" class="fg-ivu-switch">
@@ -58,10 +58,8 @@ describe('fieldSwitch', () => {
 
         wrapper.find('span').trigger('click');
         await wrapper.vm.$nextTick();
-        expect(wrapper.find('input').attributes('value')).to.equal('1')
+        expect(wrapper.find('input').attributes('value')).to.equal('1');
 
         // shallowMount 挂载组件，问题：触发事件后数据状态的改变检测不到
-        
     });
-
 });
