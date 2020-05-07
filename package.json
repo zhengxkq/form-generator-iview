@@ -26,7 +26,8 @@
         "build": "npm run build-dev && npm run build-prod",
         "lint": "eslint --fix --ext .js,.vue,.json src --fix --ext .json docs/website-data-api",
         "deploy": "fis3 release --root=./website/dist/ --file=./deploy-baidu/config.js",
-        "test": "karma start ./test/karma.conf.js --single-run"
+        "test": "karma start ./test/karma.conf.js --single-run",
+        "test-watch": "karma start ./test/karma.conf.js --auto-watch"
     },
     "repository": {
         "type": "git",

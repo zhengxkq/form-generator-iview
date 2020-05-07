@@ -38,7 +38,7 @@ export default {
             default() {
                 return 'default';
             }
-        },
+        }
     },
     data() {
         return {
