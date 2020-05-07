@@ -1,5 +1,5 @@
 /**
- * @file: Switch测试用例
+ * @file: Slider测试用例
  * @author: gls(guoyu5212@163.com)
  * @Date: 2020-05-07 14:53:08
  * @Last Modified by: gls
