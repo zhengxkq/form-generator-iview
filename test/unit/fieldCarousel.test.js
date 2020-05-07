@@ -3,20 +3,22 @@
  * @author: zhw
  * @Date: 2020-05-08 00:36:33
  * @Last Modified by: zhw
- * @Last Modified time: 2020-05-08 01:08:27
+ * @Last Modified time: 2020-05-08 01:33:57
  */
 
 import {expect} from 'chai';
 import fieldCarousel from '../../src/fields/fieldCarousel';
-import {shallowMount} from '@vue/test-utils';
+import {shallowMount, mount} from '@vue/test-utils';
 
 
-describe('fieldButton', () => {
+describe('fieldCarousel', () => {
     // 现在挂载组件，你便得到了这个包裹器
     const wrapper = shallowMount(fieldCarousel, {
         provide: {
             form: {
-                model: {}
+                model: {
+                    city: 'shanghai'
+                }
             }
         },
         propsData: {
@@ -57,20 +59,72 @@ describe('fieldButton', () => {
         expect(wrapper.vm.computedOptions.length).to.equal(4);
     });
 
-    // it('emit button click', async () => {
-    //     wrapper.find('button').trigger('click');
-    //     await wrapper.vm.$nextTick();
-    //     expect(wrapper.emitted()['on-button-event'][0][0]).to.deep.equal({
-    //         name: 'delete',
-    //         field: {
-    //             type: 'Button',
-    //             text: '删除',
-    //             subtype: 'error',
-    //             action: {
-    //                 type: 'event',
-    //                 name: 'delete'
-    //             }
-    //         }
-    //     });
-    // });
+    it('confirm currentIndex', () => {
+        expect(wrapper.vm.currentIndex).to.equal(1);
+    });
+});
+
+describe('fieldCarousel subType video', () => {
+    // 现在挂载组件，你便得到了这个包裹器
+    const wrapper = shallowMount(fieldCarousel, {
+        provide: {
+            form: {
+                model: {
+                    city: 'two'
+                }
+            }
+        },
+        propsData: {
+            field: {
+                type: 'Carousel',
+                model: 'city',
+                subtype: 'video',
+                options: [
+                    {
+                        value: 'one',
+                        url: 'http://sc4.hao123img.com/materials/xz.upload/b6/b6aafe3af127fd2ef47a1afb54fcd4bd.mp4'
+                    },
+                    {
+                        value: 'two',
+                        url: 'http://sc2.hao123img.com/materials/xz.upload/08/08a237bc1a51794c8e3ff2d410045066.mp4'
+                    }
+                ]
+            }
+        }
+    });
+    it('confirm video', () => {
+        expect(wrapper.contains('video')).to.be.true;
+    });
+});
+describe('fieldCarousel valueAsOptions', () => {
+    // 现在挂载组件，你便得到了这个包裹器
+    const wrapper = shallowMount(fieldCarousel, {
+        provide: {
+            form: {
+                model: {
+                    city: [
+                        {
+                            value: 'one',
+                            url: 'http://sc4.hao123img.com/materials/xz.upload/b6/b6aafe3af127fd2ef47a1afb54fcd4bd.mp4'
+                        },
+                        {
+                            value: 'two',
+                            url: 'http://sc2.hao123img.com/materials/xz.upload/08/08a237bc1a51794c8e3ff2d410045066.mp4'
+                        }
+                    ]
+                }
+            }
+        },
+        propsData: {
+            field: {
+                type: 'Carousel',
+                model: 'city',
+                subtype: 'video',
+                valueAsOptions: true
+            }
+        }
+    });
+    it('confirm computedOptions length', () => {
+        expect(wrapper.vm.computedOptions.length).to.equal(2);
+    });
 });
