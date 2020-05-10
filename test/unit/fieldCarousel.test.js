@@ -3,12 +3,12 @@
  * @author: zhw
  * @Date: 2020-05-08 00:36:33
  * @Last Modified by: zhw
- * @Last Modified time: 2020-05-08 01:33:57
+ * @Last Modified time: 2020-05-10 22:36:55
  */
 
 import {expect} from 'chai';
 import fieldCarousel from '../../src/fields/fieldCarousel';
-import {shallowMount, mount} from '@vue/test-utils';
+import {shallowMount} from '@vue/test-utils';
 
 
 describe('fieldCarousel', () => {

@@ -15,6 +15,7 @@
 import getOptions from '../mixins/getOptions';
 import {getValue} from '../utils/processValue';
 
+// todo 传入值data统一改为option？
 export default {
     inject: ['form'],
     mixins: [getOptions],
@@ -28,7 +29,7 @@ export default {
             default() {
                 return 'default';
             }
-        },
+        }
     },
     data() {
         return {
